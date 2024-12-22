@@ -28,8 +28,8 @@ Ensure the following tools and libraries are installed on your system:
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/ohnotnow/blade-to-flux.git
+   cd blade-to-flux
    ```
 
 2. Install the dependencies using [uv](https://docs.astral.sh/uv/):
