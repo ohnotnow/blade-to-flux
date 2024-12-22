@@ -55,7 +55,7 @@ uv run main.py --directory <directory_path> [--model <model_name>] [--start-file
 ### Example
 
 ```bash
-uv run main.py -d /Users/you/code/project/resources/templates
+uv run main.py -d /Users/you/code/project/resources/views
 ```
 
 ## Key Notes

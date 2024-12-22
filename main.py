@@ -36,6 +36,8 @@ def process_all_blade_files(directory: str, model_name: str, start_file: str = "
     start_time = time.time()
     should_start = start_file == ""
     for file_path in find_all_blade_files(directory):
+        print(f"File: {file_path}")
+        exit()
         if not should_start:
             if file_path == start_file:
                 should_start = True

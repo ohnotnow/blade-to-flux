@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from pydantic_ai.result import Cost
+from pydantic_ai.result import Usage
 from typing import Dict, Optional
 import json
 import sys
@@ -31,13 +31,13 @@ def get_model_pricing():
             )
     return model_pricing
 
-def get_cost(model_name: str, cost_obj: Cost) -> float:
+def get_cost(model_name: str, cost_obj: Usage) -> float:
     """
     Calculates the total cost of an API request based on the model and token usage.
 
     Args:
         model_name (str): The name of the model (e.g., 'openai:gpt-4o-mini' or 'gpt-4o-mini').
-        cost_obj (Cost): An instance of the pydantic_ai.Cost model containing token usage details.
+        cost_obj (Usage): An instance of the pydantic_ai.Usage model containing token usage details.
 
     Returns:
         float: The total cost in USD.
@@ -79,7 +79,7 @@ def get_cost(model_name: str, cost_obj: Cost) -> float:
 # Example Usage
 if __name__ == "__main__":
     # Sample cost object based on your example
-    cost_example = Cost(
+    cost_example = Usage(
         request_tokens=9559,
         response_tokens=1528,
         total_tokens=11087,
